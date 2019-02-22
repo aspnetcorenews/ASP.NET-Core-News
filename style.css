@@ -15,19 +15,11 @@ body {
 	color: #fff !important;
 }
 .navbar .navbar-brand {
-	width: 100%;
-	margin: 0px;
-	padding: 10px 0px;
-	text-align: center;
+	display: inline-block;
+	margin: 0 auto;
 }
-.navbar .navbar-brand span {
-	display: block;
-	line-height: 18px;
-}
-.navbar .navbar-brand span:last-child {
-	font-size: 52px;
-	line-height: 40px;
-	margin-top: 3px;
+.navbar .navbar-brand img {
+	height: 120px;
 }
 
 section {
