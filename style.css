@@ -103,7 +103,7 @@ section.details p {
 }
 
 footer {
-	background: url(footer-bg.png) center top/cover no-repeat local;
+	background: url(images/footer-bg.png) center top/cover no-repeat local;
 }
 footer .container{
     text-align: center;
