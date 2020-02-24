@@ -2,9 +2,12 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 
+.btn {
+    box-shadow: none !important;
+}
 .btn-primary {
 	background: #445afb;
-	box-shadow: none !important;
+    border-color: #445afb !important;
 }
 .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
 	background: #384de8 !important;
@@ -45,7 +48,7 @@ section.hero p {
 }
 
 section.newsletter {
-	background: #faebd7;
+	background: #FEE5AD;
 }
 section.newsletter .newsletter-box svg {
 	width: 100%;
@@ -100,6 +103,9 @@ section.details p {
 	font-size: 18px;
     font-weight: 300;
     margin: 0 auto 20px auto;
+}
+section.submit {
+    padding-bottom: 0;
 }
 
 footer {
