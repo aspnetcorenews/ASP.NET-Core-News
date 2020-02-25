@@ -169,7 +169,6 @@ footer .fa-twitter:focus {
     color: #38A1F3
 }
 
-
 @media screen and (max-width: 769px) {
 	section.newsletter svg {
 		margin-bottom: 30px;
@@ -177,4 +176,33 @@ footer .fa-twitter:focus {
 	section.newsletter .newsletter-inner {
 		margin: 0px;
 	}
+}
+
+@media (max-width: 575px) {
+    section {
+        padding: 30px 0px;
+    }
+    section.hero h1 {
+        font-size: 30px;
+    }
+    section.newsletter .newsletter-box h2 {
+        text-align: center;
+        font-size: 24px;
+    }
+    section.details h2 {
+        text-align: center;
+        font-size: 24px;
+    }
+    .actions {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    .actions a, .actions button {
+        display: block;
+        width: 100%;
+        margin-bottom: 4px;
+    }
+    .actions .last {
+        margin-bottom: 0;
+    }
 }
