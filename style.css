@@ -2,9 +2,12 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 
+.btn {
+    box-shadow: none !important;
+}
 .btn-primary {
 	background: #445afb;
-	box-shadow: none !important;
+    border-color: #445afb !important;
 }
 .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
 	background: #384de8 !important;
@@ -45,7 +48,7 @@ section.hero p {
 }
 
 section.newsletter {
-	background: #faebd7;
+	background: #FEE5AD;
 }
 section.newsletter .newsletter-box svg {
 	width: 100%;
@@ -100,6 +103,9 @@ section.details p {
 	font-size: 18px;
     font-weight: 300;
     margin: 0 auto 20px auto;
+}
+section.submit {
+    padding-bottom: 0;
 }
 
 footer {
@@ -163,7 +169,6 @@ footer .fa-twitter:focus {
     color: #38A1F3
 }
 
-
 @media screen and (max-width: 769px) {
 	section.newsletter svg {
 		margin-bottom: 30px;
@@ -171,4 +176,33 @@ footer .fa-twitter:focus {
 	section.newsletter .newsletter-inner {
 		margin: 0px;
 	}
+}
+
+@media (max-width: 575px) {
+    section {
+        padding: 30px 0px;
+    }
+    section.hero h1 {
+        font-size: 30px;
+    }
+    section.newsletter .newsletter-box h2 {
+        text-align: center;
+        font-size: 24px;
+    }
+    section.details h2 {
+        text-align: center;
+        font-size: 24px;
+    }
+    .actions {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    .actions a, .actions button {
+        display: block;
+        width: 100%;
+        margin-bottom: 4px;
+    }
+    .actions .last {
+        margin-bottom: 0;
+    }
 }
