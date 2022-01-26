@@ -21,8 +21,15 @@ body {
 	display: inline-block;
 	margin: 0 auto;
 }
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255,255,255,1);
+}
 .navbar .navbar-brand img {
-	height: 120px;
+	height: 100px;
+    transition: all .1s ease-in;
+}
+.navbar.slim-mode .navbar-brand img {
+    height: 60px;
 }
 
 section {
@@ -35,16 +42,24 @@ section {
 
 section.hero {
 	text-align: center;
+    padding-top: 196px;
 }
 section.hero h1 {
 	font-size: 40px;
 	font-weight: 400;
-	margin-bottom: 25px;
+	margin-bottom: 0px;
+}
+section.hero span.rotator {
+	font-size: 40px;
+	font-weight: 400;
+}
+section.hero .typed-cursor {
+    font-size: 40px;
 }
 section.hero p {
 	font-size: 18px;
 	font-weight: 300;
-	margin: 0 auto 20px auto;
+	margin: 25px auto 20px auto;
 }
 
 section.newsletter {
@@ -169,6 +184,27 @@ footer .fa-twitter:focus {
     color: #38A1F3
 }
 
+@media (min-width: 1200px) {
+    .container {
+        max-width: 800px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 800px;
+    }
+}
+
+@media (max-width: 991px) {
+    .navbar .navbar-brand {
+        margin: 0;
+    }
+    .navbar .navbar-collapse ul {
+        padding: 15px 0px;
+    }
+}
+
 @media screen and (max-width: 769px) {
 	section.newsletter svg {
 		margin-bottom: 30px;
@@ -183,6 +219,12 @@ footer .fa-twitter:focus {
         padding: 30px 0px;
     }
     section.hero h1 {
+        font-size: 30px;
+    }
+    section.hero span.rotator {
+        font-size: 30px;
+    }
+    section.hero .typed-cursor {
         font-size: 30px;
     }
     section.newsletter .newsletter-box h2 {

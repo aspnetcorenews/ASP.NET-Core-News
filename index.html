@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>ASP.NET Core News - Your weekly update of everything ASP.NET Core</title>
+        <title>ASP.NET Core News - Your weekly update on ASP.NET Core</title>
         <meta name="description" content="Sign up for the ASP.NET Core weekly newsletter to receive a weekly digest of blog posts about ASP.NET Core, MVC, Blazor, SignalR, and much more.">
         <!-- Required meta tags -->
         <meta charset="utf-8">
@@ -38,22 +38,34 @@
         </script>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="https://aspnetcore.news">
-            <img src="images/logo.png" alt="ASP.NET Core News" />
-            </a>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="https://aspnetcore.news"><img class="img-fluid" src="images/logo.svg" alt="ASP.NET Core News" /></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" id="goto" href="javascript:;">Subscribe</a></li>
+                        <li class="nav-item"><a class="nav-link" id="gotoSubmit" href="javascript:;">Submit</a></li>
+                        <li class="nav-item"><a class="nav-link" id="gotoAbout" href="javascript:;">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Sponsor</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://us7.campaign-archive.com/home/?u=66fdd2122e968863d381a26e1&id=25e58ef874" target="_blank">Past newsletters</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
         <section class="hero">
             <div class="section-inner">
                 <div class="container">
-                    <h1>Your weekly update of everything ASP.NET Core</h1>
+                    <h1>Your weekly update of everything</h1>
+                    <span class="rotator"></span>
+
                     <p class="lead">
                         ASP.NET Core News is the only weekly newsletter dedicated to ASP.NET Core. Whether you build Razor Pages, MVC applications, Web APIs, Blazor, SignalR awesomeness, or anything else available on the ASP.NET Core platform, we've got you covered. Every Friday you will receive a weekly digest of the most interesting posts and articles from the last seven days.
                     </p>
                     <div class="actions">
-                        <a href="https://us7.campaign-archive.com/home/?u=66fdd2122e968863d381a26e1&id=25e58ef874" role="button" class="btn btn-secondary">Past newsletters</a>
-                        <button id="goto" type="button" class="btn btn-primary">Subscribe now</button>
-                        <button id="gotoSubmit" type="button" class="btn btn-primary last">Submit article</button>
+                        <button id="goto2" type="button" class="btn btn-primary btn-lg mt-2">Subscribe now</button>
                     </div>
                 </div>
             </div>
@@ -155,7 +167,7 @@
         <section id="submit" class="submit">
             <div class="section-inner">
                 <div class="container">
-                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScKJlI8E-xD7lj11J0qn7dJSyouOhPCEeXBzRFZKMGt5wXrMg/viewform?embedded=true" width="640" height="650" frameborder="0" marginheight="0" marginwidth="0" style="width:100%;">Loading…</iframe>
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScKJlI8E-xD7lj11J0qn7dJSyouOhPCEeXBzRFZKMGt5wXrMg/viewform?embedded=true" width="640" height="720" frameborder="0" marginheight="0" marginwidth="0" style="width:100%;">Loading…</iframe>
                 </div>
             </div>
         </section>
@@ -190,21 +202,8 @@
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <script type="text/javascript">
-            $(document).ready(function(){
-            	$("#goto").click(function() {
-               $('html, body').animate({
-                   scrollTop: $("#newsletter").offset().top
-               }, 800, function(){
-               	$("#start").focus();
-               });
-            });
-            $("#gotoSubmit").click(function() {
-               $('html, body').animate({
-                   scrollTop: $("#submit").offset().top
-               }, 800);
-            });
-            });
-        </script>
+        <script src="js/typed.js"></script>
+        <script src="js/main.js"></script>
     </body>
+
 </html>
