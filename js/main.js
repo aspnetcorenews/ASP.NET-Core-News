@@ -32,6 +32,16 @@ $(document).ready(function(){
             }
         });
     });
+    $("#gotoSponsor").click(function() {
+        $('html, body').animate({
+            scrollTop: $(".sponsor").offset().top - 86
+        }, {
+            duration: 800,
+            start: function() {
+                $('.navbar-collapse').collapse('hide');
+            }
+        });
+    });
 
     // Navbar scroll
     function navbarScroll() {
