@@ -1,5 +1,30 @@
 $(document).ready(function(){
-    $("#goto, #goto2").click(function(e) {
+
+    // Navbar navigation
+    $('#navbarScroll .navbar-nav .nav-item .nav-link').on('click', function(e) {
+        var linkItem = $(this).get(0),
+            linkItemId = $(linkItem).attr('href');
+
+        if(linkItemId.substring(0, 1) === "#") {
+            e.preventDefault();
+            $('html, body').animate({
+                scrollTop: $(linkItemId).offset().top - 86
+            }, {
+                duration: 600,
+                start: function() {
+                    $('.navbar-collapse').collapse('hide');
+                },
+                complete: function() {
+                    if(linkItemId === "#newsletter") {
+                        $("#start").focus();
+                    }
+                }
+            });
+        }
+    });
+
+    // Go to section
+    $("#goto-newsletter").click(function(e) {
         $('html, body').animate({
             scrollTop: $("#newsletter").offset().top - 86
         }, {
@@ -12,35 +37,17 @@ $(document).ready(function(){
             }
         });
     });
-    $("#gotoSubmit").click(function() {
-        $('html, body').animate({
-            scrollTop: $("#submit").offset().top - 86
-        }, {
-            duration: 800,
-            start: function() {
-                $('.navbar-collapse').collapse('hide');
+
+    // Section exists on URL
+    $(window).on('load', function() {
+        if(window.location.search.includes("?section=")) {
+            var section = window.location.search.replace("?section=", "");
+            if(section) {
+                $('html, body').animate({
+                    scrollTop: $('#' + section).offset().top - 86
+                }, 600);
             }
-        });
-    });
-    $("#gotoAbout").click(function() {
-        $('html, body').animate({
-            scrollTop: $(".details").offset().top - 86
-        }, {
-            duration: 800,
-            start: function() {
-                $('.navbar-collapse').collapse('hide');
-            }
-        });
-    });
-    $("#gotoSponsor").click(function() {
-        $('html, body').animate({
-            scrollTop: $(".sponsor").offset().top - 86
-        }, {
-            duration: 800,
-            start: function() {
-                $('.navbar-collapse').collapse('hide');
-            }
-        });
+        }
     });
 
     // Navbar scroll
