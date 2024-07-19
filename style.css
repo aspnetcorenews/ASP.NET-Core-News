@@ -3,6 +3,10 @@ body {
     position: relative;
 }
 
+dt {
+    font-weight: 600;
+}
+
 .btn {
     box-shadow: none !important;
 }
@@ -15,7 +19,7 @@ body {
 }
 
 .navbar.bg-dark {
-	background: #000 !important;
+	background: #0b1627 !important;
 	color: #fff !important;
 }
 .navbar .navbar-brand {
@@ -42,8 +46,28 @@ section {
 }
 
 section.hero {
+    background-image: radial-gradient(145.05% 100% at 50% 0, #8a207e 0, #0b1627 57.38%, #0b1627 88.16%);
 	text-align: center;
     padding-top: 196px;
+    min-height: 730px;
+    color: #fff;
+    position: relative;
+}
+section.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    opacity: 0.1;
+    background-image: linear-gradient(#445afb 1px, transparent 1px), linear-gradient(to right, #445afb 1px, #0b1627 1px);
+    background-size: 20px 20px;
+    z-index: 1;
+}
+section.hero .section-inner {
+    z-index: 9;
 }
 section.hero h1 {
 	font-size: 40px;
@@ -66,19 +90,22 @@ section.hero p {
 section.newsletter {
 	background: #FEE5AD;
 }
-section.newsletter .newsletter-box svg {
-	width: 100%;
-	height: 150px;
-}
-section.newsletter .newsletter-box h2 {
+section.newsletter h2 {
 	font-size: 30px;
 	font-weight: 400;
 	margin-bottom: 20px;
 }
-section.newsletter .newsletter-box p {
+section.newsletter p {
 	font-size: 18px;
 	font-weight: 300;
 	margin: 0 auto 20px auto;
+}
+section.newsletter svg {
+    margin-bottom: -70px;
+    width: 206px;
+}
+section.newsletter .newsletter-box form {
+    margin-top: 20px;
 }
 section.newsletter .newsletter-box form .form-row {
 	margin-bottom: 10px;
@@ -106,10 +133,10 @@ section.newsletter .newsletter-box form .input-group .btn {
     font-size: 14px;
     margin: 2px;
 }
-section.newsletter .newsletter-inner {
-	margin-left: 50px;
-}
 
+section.details {
+    background: #f9fafb;
+}
 section.details h2 {
 	font-size: 30px;
     font-weight: 400;
@@ -120,8 +147,41 @@ section.details p {
     font-weight: 300;
     margin: 0 auto 20px auto;
 }
-section.submit {
-    padding-bottom: 0;
+
+
+section.media-kit h2 {
+	font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+section.media-kit p {
+	font-size: 18px;
+    font-weight: 300;
+    margin: 0 auto 20px auto;
+}
+
+
+section.submit h2 {
+	font-size: 30px;
+	font-weight: 400;
+	margin-bottom: 20px;
+}
+section.submit p {
+	font-size: 18px;
+	font-weight: 300;
+	margin: 0 auto 20px auto;
+}
+
+
+section.sponsor h2 {
+	font-size: 30px;
+	font-weight: 400;
+	margin-bottom: 20px;
+}
+section.sponsor p {
+	font-size: 18px;
+	font-weight: 300;
+	margin: 0 auto 20px auto;
 }
 
 footer {
@@ -156,7 +216,7 @@ footer .footer-social{
     text-align: center;
     padding-top: 30px;
 }
-footer .fa{
+footer .fa {
     font-size: 22px;
     margin-right: 15px;
     margin-left: 20px;
@@ -167,10 +227,10 @@ footer .fa{
     height: 50px;
     width: 50px;
     text-align: center;
-    line-height: 28px;
+    line-height: 22px;
     text-decoration: none;
     border: 2px solid #ebebeb;
-    transition:color 0.2s;
+    transition: color 0.2s;
 }
 footer .fa-facebook:hover,
 footer .fa-facebook:focus {
@@ -180,9 +240,10 @@ footer .fa-google-plus:hover,
 footer .fa-google-plus:focus {
     color: #d34836
 }
-footer .fa-twitter:hover,
-footer .fa-twitter:focus {
-    color: #38A1F3
+footer .x-twitter:hover path,
+footer .x-twitter:focus path {
+    fill: #000;
+    transition: fill 0.2s;
 }
 
 @media (min-width: 1200px) {
@@ -207,8 +268,14 @@ footer .fa-twitter:focus {
 }
 
 @media screen and (max-width: 769px) {
+    section.hero {
+        min-height: auto;
+    }
+    section.newsletter .newsletter-box form {
+        margin-top: 0;
+    }
 	section.newsletter svg {
-		margin-bottom: 30px;
+		margin-top: 30px;
 	}
 	section.newsletter .newsletter-inner {
 		margin: 0px;
@@ -218,6 +285,9 @@ footer .fa-twitter:focus {
 @media (max-width: 575px) {
     section {
         padding: 30px 0px;
+    }
+    section.hero {
+        padding-top: 155px;
     }
     section.hero h1 {
         font-size: 30px;
@@ -232,6 +302,11 @@ footer .fa-twitter:focus {
         text-align: center;
         font-size: 24px;
     }
+    section.newsletter svg {
+		margin-top: 30px;
+        margin-bottom: -30px;
+        width: 150px;
+	}
     section.details h2 {
         text-align: center;
         font-size: 24px;

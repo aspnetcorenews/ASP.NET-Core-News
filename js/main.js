@@ -5,10 +5,10 @@ $(document).ready(function(){
         var linkItem = $(this).get(0),
             linkItemId = $(linkItem).attr('href');
 
-        if(linkItemId.substring(0, 1) === "#") {
+        if (linkItemId.substring(0, 1) === "#") {
             e.preventDefault();
             $('html, body').animate({
-                scrollTop: $(linkItemId).offset().top - 86
+                scrollTop: $(linkItemId).offset().top - 85
             }, {
                 duration: 600,
                 start: function() {
@@ -26,7 +26,7 @@ $(document).ready(function(){
     // Go to section
     $("#goto-newsletter").click(function(e) {
         $('html, body').animate({
-            scrollTop: $("#newsletter").offset().top - 86
+            scrollTop: $("#newsletter").offset().top - 85
         }, {
             duration: 800,
             start: function() {
@@ -44,7 +44,7 @@ $(document).ready(function(){
             var section = window.location.search.replace("?section=", "");
             if(section) {
                 $('html, body').animate({
-                    scrollTop: $('#' + section).offset().top - 86
+                    scrollTop: $('#' + section).offset().top - 85
                 }, 600);
             }
         }
@@ -66,12 +66,48 @@ $(document).ready(function(){
     navbarScroll();
 
     // TypedJS
-
     var typed = new Typed('.rotator', {
         strings: ["ASP.NET Core", "Razor Pages", "Blazor", "SignalR", "MVC", "gRPC"],
         typeSpeed: 30,
         backDelay: 2000,
         backSpeed: 30,
         loop: true
+    });
+
+    function showSuccess() {
+        $('#google-forms').slideUp(400, function() {
+            $('.success-message').fadeIn(400, function() {
+                $('#google-forms')[0].reset();
+            });
+        });
+    }
+
+    $('#submit-new').on('click', function() {
+        $('.success-message').fadeOut(400, function() {
+            $('#google-forms').slideDown();
+        });
+    });
+
+    // Submit to Google Forms
+    $('#google-forms').on("submit", function (e) {
+        e.preventDefault();
+        
+        var form = $(this);
+        var actionUrl = form.attr('action');
+    
+        $.ajax({
+            type: "POST",
+            dataType: 'xml',
+            url: actionUrl,
+            data: form.serialize(),
+            statusCode: {
+                0: function () {
+                    showSuccess();
+                },
+                200: function () {
+                    showSuccess();
+                }
+            }
+        });
     });
 });
