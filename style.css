@@ -218,8 +218,8 @@ footer .footer-social{
 }
 footer .fa {
     font-size: 22px;
-    margin-right: 15px;
-    margin-left: 20px;
+    margin-right: 10px;
+    margin-left: 15px;
     background-color: white;
     color: #d0d0d0;
     border-radius: 100%;
@@ -243,6 +243,15 @@ footer .fa-google-plus:focus {
 footer .x-twitter:hover path,
 footer .x-twitter:focus path {
     fill: #000;
+    transition: fill 0.2s;
+}
+footer .x-bsky {
+    position: relative;
+    top: 1px;
+}
+footer .x-bsky:hover path,
+footer .x-bsky:focus path {
+    fill: #0085ff;
     transition: fill 0.2s;
 }
 
