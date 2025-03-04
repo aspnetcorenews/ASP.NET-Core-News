@@ -67,7 +67,7 @@ $(document).ready(function(){
 
     // TypedJS
     var typed = new Typed('.rotator', {
-        strings: ["ASP.NET Core", "Razor Pages", "Blazor", "SignalR", "MVC", "gRPC"],
+        strings: ["ASP.NET Core", "Razor Pages", "Blazor", "SignalR", "MVC", "gRPC", "Aspire", "OData", "Minimal APIs", "OpenTelemetry"],
         typeSpeed: 30,
         backDelay: 2000,
         backSpeed: 30,
