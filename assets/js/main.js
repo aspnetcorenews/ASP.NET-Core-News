@@ -1,7 +1,10 @@
 $(document).ready(function(){
+    $('#currentYear').text(new Date().getFullYear());
 
     // Navbar navigation
     $('#navbarScroll .navbar-nav .nav-item .nav-link').on('click', function(e) {
+        $('#navbarScroll .navbar-nav .nav-item .nav-link').removeClass('active');
+
         var linkItem = $(this).get(0),
             linkItemId = $(linkItem).attr('href');
 
@@ -15,9 +18,10 @@ $(document).ready(function(){
                     $('.navbar-collapse').collapse('hide');
                 },
                 complete: function() {
-                    if(linkItemId === "#newsletter") {
+                    if (linkItemId === "#newsletter") {
                         $("#start").focus();
                     }
+                    $(linkItem).addClass('active');
                 }
             });
         }
@@ -66,13 +70,15 @@ $(document).ready(function(){
     navbarScroll();
 
     // TypedJS
-    var typed = new Typed('.rotator', {
-        strings: ["ASP.NET Core", "Razor Pages", "Blazor", "SignalR", "MVC", "gRPC", "Aspire", "OData", "Minimal APIs", "OpenTelemetry"],
-        typeSpeed: 30,
-        backDelay: 2000,
-        backSpeed: 30,
-        loop: true
-    });
+    if ($('.rotator').length) {
+        var typed = new Typed('.rotator', {
+            strings: ["ASP.NET Core", "Razor Pages", "Blazor", "SignalR", "MVC", "gRPC", "Aspire", "OData", "Minimal APIs", "OpenTelemetry"],
+            typeSpeed: 30,
+            backDelay: 2000,
+            backSpeed: 30,
+            loop: true
+        });
+    }
 
     function showSuccess() {
         $('#google-forms').slideUp(400, function() {

@@ -10,36 +10,35 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
         <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-        <link rel="icon" type="image/png" href="images/favicon-192x192.png" sizes="192x192">
-        <link rel="icon" type="image/png" href="images/favicon-160x160.png" sizes="160x160">
-        <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96">
-        <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32">
-        <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16">
-        <meta name="msapplication-TileImage" content="images/ms-icon-144x144.png">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" href="assets/images/favicon-192x192.png" sizes="192x192">
+        <link rel="icon" type="image/png" href="assets/images/favicon-160x160.png" sizes="160x160">
+        <link rel="icon" type="image/png" href="assets/images/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="assets/images/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="assets/images/favicon-16x16.png" sizes="16x16">
+        <meta name="msapplication-TileImage" content="assets/images/ms-icon-144x144.png">
         <meta property="og:type" content="website" />
         <meta property="og:title" content="ASP.NET Core News - Your weekly update of everything ASP.NET Core" />
         <meta property="og:description" content="ASP.NET Core News is the only weekly newsletter dedicated to ASP.NET Core. Whether you build Razor Pages, MVC applications, Web APIs, Blazor, SignalR awesomeness, or anything else available on the ASP.NET Core platform, we've got you covered. Every Friday you will receive a weekly digest of the most interesting posts and articles from the last seven days." />
-        <meta property="og:image" content="https://aspnetcore.news/images/aspnetcorenews.png" />
+        <meta property="og:image" content="https://aspnetcore.news/assets/images/aspnetcorenews.png" />
         <meta property="og:url" content="https://aspnetcore.news/" />
         <meta property="og:site_name" content="ASP.NET Core News" />
         <meta name="twitter:title" content="ASP.NET Core News - Your weekly update of everything ASP.NET Core">
         <meta name="twitter:description" content="ASP.NET Core News is the only weekly newsletter dedicated to ASP.NET Core. Whether you build Razor Pages, MVC applications, Web APIs, Blazor, SignalR awesomeness, or anything else available on the ASP.NET Core platform, we've got you covered. Every Friday you will receive a weekly digest of the most interesting posts and articles from the last seven days.">
-        <meta name="twitter:image" content="https://aspnetcore.news/images/aspnetcorenews.png">
+        <meta name="twitter:image" content="https://aspnetcore.news/assets/images/aspnetcorenews.png">
         <meta name="twitter:site" content="@aspnetcore_news">
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
             <div class="container">
-                <a class="navbar-brand" href="https://aspnetcore.news"><img class="img-fluid" src="images/logo.svg" alt="ASP.NET Core News" /></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand" href="https://aspnetcore.news"><img class="img-fluid" src="assets/images/logo.svg" alt="ASP.NET Core News" /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarScroll">
-                    <ul class="navbar-nav ml-auto">
+                    <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="#newsletter">Subscribe</a></li>
                         <li class="nav-item"><a class="nav-link" href="#submit">Submit</a></li>
                         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
@@ -49,6 +48,8 @@
                 </div>
             </div>
         </nav>
+
+
         <section class="hero d-flex">
             <div class="section-inner d-flex flex-column justify-content-center align-items-center">
                 <div class="container">
@@ -75,7 +76,7 @@
                             <div class="newsletter-box">
                                 <div class="newsletter-inner">
                                     <form action="https://elmah.us7.list-manage.com/subscribe/post?u=66fdd2122e968863d381a26e1&amp;id=25e58ef874" method="post">
-                                        <div class="form-row">
+                                        <div class="row g-2 mb-2">
                                             <div class="col">
                                                 <input type="text" class="form-control" id="start" name="FNAME" placeholder="First name">
                                             </div>
@@ -94,7 +95,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col text-md-right text-center">
+                        <div class="col text-md-end text-center">
                             <?xml version="1.0" encoding="UTF-8"?>
                             <svg baseProfile="tiny" version="1.2" viewBox="0 0 576.5 493.5" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="203.3" cy="191" r="31" fill="#F2F2F2"/>
@@ -132,22 +133,22 @@
                     <p>Please make sure to submit new content only. Blog posts already shared or more than 1 month old won't get shared. Blog posts must have a visible publish date and a link to your X/Twitter account. Thank you so much for your contribution 🙌</p>
 
                     <form id="google-forms" action="https://docs.google.com/forms/d/e/1FAIpQLScKJlI8E-xD7lj11J0qn7dJSyouOhPCEeXBzRFZKMGt5wXrMg/formResponse" method="POST">
-                        <div class="form-group">
+                        <div class="form-group mb-3">
                             <label for="url">URL</label>
                             <input type="url" class="form-control" id="url" name="entry.2100471048" aria-describedby="urlHelp" required>
                             <small id="urlHelp" class="form-text text-muted">Please paste a valid canonical URL without UTM tracking, fbclid parameters, and similar.</small>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group mb-3">
                             <label for="twitter">X/Twitter handle</label>
                             <input type="text" class="form-control" id="twitter" name="entry.492288226" aria-describedby="twitterHelp">
                             <small id="twitterHelp" class="form-text text-muted">Please paste a personal X/Twitter handle without @-prefix. Company handles won't get shared.</small>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group mb-3">
                             <label for="bluesky">Bluesky handle</label>
                             <input type="text" class="form-control" id="bluesky" name="entry.2131364545" aria-describedby="blueskyHelp">
                             <small id="blueskyHelp" class="form-text text-muted">Please paste a personal Bluesky handle without @-prefix. Company handles won't get shared.</small>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group mb-3">
                             <label for="more">Anything you want to add?</label>
                             <textarea class="form-control" id="more" name="entry.1173441620" rows="3"></textarea>
                         </div>
@@ -195,17 +196,17 @@
                         <li><a href="#">Reviews</a></li>
                         <li><a href="#">Terms of service</a></li>
                         </ul> -->
-                    <p class="footer-copyright">© 2019-<script>document.write(new Date().getFullYear())</script> aspnetcore.news with ❤ by <a href="https://elmah.io" target="_blank">elmah.io</a></p>
+                    <p class="footer-copyright">© 2019 - <span id="currentYear"></span> aspnetcore.news with ❤ by <a href="https://elmah.io" target="_blank">elmah.io</a></p>
                 </div>
             </div>
         </footer>
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <script src="js/typed.js"></script>
-        <script src="js/main.js"></script>
+        <script src="assets/js/jquery-4.0.0.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/typed.umd.js"></script>
+        <script src="assets/js/main.js"></script>
     </body>
 
 </html>
