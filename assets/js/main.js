@@ -76,7 +76,8 @@ $(document).ready(function(){
             typeSpeed: 30,
             backDelay: 2000,
             backSpeed: 30,
-            loop: true
+            loop: true,
+            autoInsertCss: false
         });
     }
 
