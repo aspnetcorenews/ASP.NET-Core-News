@@ -82,7 +82,7 @@ $(document).ready(function(){
 
     function showSuccess() {
         $('#google-forms').slideUp(400, function() {
-            $('.success-message').fadeIn(400, function() {
+            $('.success-message').hide().removeClass('d-none').fadeIn(400, function() {
                 $('#google-forms')[0].reset();
             });
         });
@@ -91,7 +91,7 @@ $(document).ready(function(){
     $('#submit-new').on('click', function() {
         $('.success-message').fadeOut(400, function() {
             $('#google-forms').slideDown();
-        });
+        }).addClass('d-none');
     });
 
     // Submit to Google Forms

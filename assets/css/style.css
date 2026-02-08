@@ -145,6 +145,10 @@ section.newsletter .newsletter-box form .input-group {
     background: #fff;
     border: 1px solid #ecc48d;
 }
+section.newsletter .newsletter-box form .input-group .hide-input {
+	position: absolute;
+    left: -5000px;
+}
 section.newsletter .newsletter-box form .input-group .form-control {
 	border: none;
 }
